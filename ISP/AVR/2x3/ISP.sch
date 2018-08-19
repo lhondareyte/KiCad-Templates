@@ -1,81 +1,19 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:ISP-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "MIDI-USB Interface"
-Date "2014-04-20"
-Rev "1.6"
-Comp "LOFITECH"
+Title ""
+Date "2018-08-19"
+Rev ""
+Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L CONN_02X03 P?
-U 1 1 57431E89
-P 3000 6700
-F 0 "P?" H 3000 6900 50  0000 C CNN
-F 1 "AVR-ISP" H 3000 6500 50  0000 C CNN
-F 2 "" H 3000 5500 50  0000 C CNN
-F 3 "" H 3000 5500 50  0000 C CNN
-	1    3000 6700
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR?
-U 1 1 57432109
-P 3300 6500
-F 0 "#PWR?" H 3300 6350 50  0001 C CNN
-F 1 "+5V" H 3300 6640 44  0000 C CNN
-F 2 "" H 3300 6500 50  0000 C CNN
-F 3 "" H 3300 6500 50  0000 C CNN
-	1    3300 6500
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 57432123
-P 3300 6900
-F 0 "#PWR?" H 3300 6650 50  0001 C CNN
-F 1 "GND" H 3300 6750 44  0000 C CNN
-F 2 "" H 3300 6900 50  0000 C CNN
-F 3 "" H 3300 6900 50  0000 C CNN
-	1    3300 6900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3250 6600 3300 6600
 Wire Wire Line
@@ -100,4 +38,37 @@ Text Label 2550 6800 0    44   ~ 0
 ~RST
 Text Label 3500 6700 2    44   ~ 0
 MOSI
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J?
+U 1 1 5B79766C
+P 2950 6700
+F 0 "J?" H 3000 7017 50  0000 C CNN
+F 1 "ISP" H 3000 6926 50  0000 C CNN
+F 2 "" H 2950 6700 50  0001 C CNN
+F 3 "~" H 2950 6700 50  0001 C CNN
+	1    2950 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B7976F0
+P 3300 6900
+F 0 "#PWR?" H 3300 6650 50  0001 C CNN
+F 1 "GND" H 3305 6727 50  0000 C CNN
+F 2 "" H 3300 6900 50  0001 C CNN
+F 3 "" H 3300 6900 50  0001 C CNN
+	1    3300 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5B797725
+P 3300 6500
+F 0 "#PWR?" H 3300 6350 50  0001 C CNN
+F 1 "+5V" H 3315 6673 50  0000 C CNN
+F 2 "" H 3300 6500 50  0001 C CNN
+F 3 "" H 3300 6500 50  0001 C CNN
+	1    3300 6500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

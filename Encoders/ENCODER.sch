@@ -1,36 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:ENCODER-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:ENCODER-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -44,83 +14,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L GND #PWR?
-U 1 1 57432194
-P 10050 4650
-F 0 "#PWR?" H 10050 4400 50  0001 C CNN
-F 1 "GND" H 10050 4500 50  0000 C CNN
-F 2 "" H 10050 4650 60  0000 C CNN
-F 3 "" H 10050 4650 60  0000 C CNN
-	1    10050 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 57432195
-P 9250 4650
-F 0 "#PWR?" H 9250 4400 50  0001 C CNN
-F 1 "GND" H 9250 4500 50  0000 C CNN
-F 2 "" H 9250 4650 60  0000 C CNN
-F 3 "" H 9250 4650 60  0000 C CNN
-	1    9250 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L R_Small R?
-U 1 1 57432196
-P 8900 4200
-F 0 "R?" V 8865 4285 50  0000 L CNN
-F 1 "4K7" V 8830 4130 50  0000 L CNN
-F 2 "" H 8900 4200 60  0000 C CNN
-F 3 "" H 8900 4200 60  0000 C CNN
-	1    8900 4200
-	0    1    1    0   
-$EndComp
-$Comp
-L R_Small R?
-U 1 1 57432197
-P 8900 4400
-F 0 "R?" V 8865 4485 50  0000 L CNN
-F 1 "4K7" V 8830 4330 50  0000 L CNN
-F 2 "" H 8900 4400 60  0000 C CNN
-F 3 "" H 8900 4400 60  0000 C CNN
-	1    8900 4400
-	0    1    1    0   
-$EndComp
-$Comp
-L C_Small C?
-U 1 1 57432198
-P 9150 4550
-F 0 "C?" H 9050 4620 50  0000 L CNN
-F 1 "100n" H 8950 4470 50  0000 L CNN
-F 2 "" H 9150 4550 60  0000 C CNN
-F 3 "" H 9150 4550 60  0000 C CNN
-	1    9150 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C?
-U 1 1 57432199
-P 9350 4550
-F 0 "C?" H 9360 4620 50  0000 L CNN
-F 1 "100n" H 9360 4470 50  0000 L CNN
-F 2 "" H 9350 4550 60  0000 C CNN
-F 3 "" H 9350 4550 60  0000 C CNN
-	1    9350 4550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10000 4250 10050 4250
-Wire Wire Line
-	10050 4250 10050 4000
 Wire Wire Line
 	9350 4450 9350 4400
 Connection ~ 9350 4400
-Wire Wire Line
-	10000 4350 10050 4350
-Wire Wire Line
-	10050 4350 10050 4650
 Wire Wire Line
 	9400 4300 9250 4300
 Wire Wire Line
@@ -129,23 +25,12 @@ Wire Wire Line
 	9150 4450 9150 4200
 Connection ~ 9150 4200
 Wire Wire Line
-	9150 4650 9350 4650
+	9150 4650 9250 4650
 Connection ~ 9250 4650
 Wire Wire Line
-	9000 4400 9400 4400
+	9000 4400 9350 4400
 Wire Wire Line
-	9000 4200 9400 4200
-$Comp
-L ALPS-STEC12E08 ENC?
-U 1 1 57432193
-P 9700 4300
-F 0 "ENC?" H 9600 4500 60  0000 C CNN
-F 1 "ALPS-STEC12E08" H 9750 4050 60  0001 C CNN
-F 2 "" H 9700 4305 60  0000 C CNN
-F 3 "" H 9700 4305 60  0000 C CNN
-	1    9700 4300
-	-1   0    0    -1  
-$EndComp
+	9000 4200 9150 4200
 Wire Wire Line
 	8800 4200 8550 4200
 Wire Wire Line
@@ -158,4 +43,95 @@ Text Label 8550 4200 0    44   ~ 0
 ENC?-P
 Text Label 8550 4400 0    44   ~ 0
 ENC?-M
+Wire Wire Line
+	9350 4400 9400 4400
+Wire Wire Line
+	9150 4200 9400 4200
+Wire Wire Line
+	9250 4650 9350 4650
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5B79734B
+P 9700 4300
+F 0 "SW?" H 9700 4667 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 9700 4576 50  0000 C CNN
+F 2 "" H 9550 4460 50  0001 C CNN
+F 3 "~" H 9700 4560 50  0001 C CNN
+	1    9700 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4000 10050 4200
+Wire Wire Line
+	10050 4200 10000 4200
+Wire Wire Line
+	10050 4650 10050 4400
+Wire Wire Line
+	10050 4400 10000 4400
+$Comp
+L Device:R_Small R?
+U 1 1 5B797B23
+P 8900 4400
+F 0 "R?" V 8825 4400 50  0000 C CNN
+F 1 "4k7" V 8900 4400 39  0000 C CNN
+F 2 "" H 8900 4400 50  0001 C CNN
+F 3 "~" H 8900 4400 50  0001 C CNN
+	1    8900 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5B797BFA
+P 8900 4200
+F 0 "R?" V 8825 4200 50  0000 C CNN
+F 1 "4k7" V 8900 4200 39  0000 C CNN
+F 2 "" H 8900 4200 50  0001 C CNN
+F 3 "~" H 8900 4200 50  0001 C CNN
+	1    8900 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5B797CB6
+P 9150 4550
+F 0 "C?" H 9175 4625 50  0000 L CNN
+F 1 "100n" H 9175 4475 44  0000 L CNN
+F 2 "" H 9150 4550 50  0001 C CNN
+F 3 "~" H 9150 4550 50  0001 C CNN
+	1    9150 4550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5B797DA3
+P 9350 4550
+F 0 "C?" H 9375 4625 50  0000 L CNN
+F 1 "100n" H 9375 4475 44  0000 L CNN
+F 2 "" H 9350 4550 50  0001 C CNN
+F 3 "~" H 9350 4550 50  0001 C CNN
+	1    9350 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B797FDF
+P 9250 4650
+F 0 "#PWR?" H 9250 4400 50  0001 C CNN
+F 1 "GND" H 9250 4500 50  0000 C CNN
+F 2 "" H 9250 4650 50  0001 C CNN
+F 3 "" H 9250 4650 50  0001 C CNN
+	1    9250 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B798020
+P 10050 4650
+F 0 "#PWR?" H 10050 4400 50  0001 C CNN
+F 1 "GND" H 10050 4500 50  0000 C CNN
+F 2 "" H 10050 4650 50  0001 C CNN
+F 3 "" H 10050 4650 50  0001 C CNN
+	1    10050 4650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

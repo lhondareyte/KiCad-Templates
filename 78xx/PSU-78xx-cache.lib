@@ -1,11 +1,11 @@
-EESchema-LIBRARY Version 2.3
+EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# CP1_Small
+# PSU-78xx-rescue:CP1_Small
 #
-DEF CP1_Small C 0 10 N N 1 F N
+DEF PSU-78xx-rescue:CP1_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "CP1_Small" 10 -80 50 H V L CNN
+F1 "PSU-78xx-rescue:CP1_Small" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -21,11 +21,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# C_Small
+# PSU-78xx-rescue:C_Small
 #
-DEF C_Small C 0 10 N N 1 F N
+DEF PSU-78xx-rescue:C_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "C_Small" 10 -80 50 H V L CNN
+F1 "PSU-78xx-rescue:C_Small" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -39,11 +39,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Conn_01x02
+# PSU-78xx-rescue:Conn_01x02
 #
-DEF Conn_01x02 J 0 40 Y N 1 F N
+DEF PSU-78xx-rescue:Conn_01x02 J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Conn_01x02" 0 -200 50 H V C CNN
+F1 "PSU-78xx-rescue:Conn_01x02" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -63,11 +63,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# GND
+# PSU-78xx-rescue:GND
 #
-DEF GND #PWR 0 0 Y Y 1 F P
+DEF PSU-78xx-rescue:GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "GND" 0 -150 50 H V C CNN
+F1 "PSU-78xx-rescue:GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -76,14 +76,13 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# L7805
+# PSU-78xx-rescue:L7805
 #
-DEF L7805 U 0 10 Y Y 1 F N
+DEF PSU-78xx-rescue:L7805 U 0 10 Y Y 1 F N
 F0 "U" -150 125 50 H V C CNN
-F1 "L7805" 0 125 50 H V L CNN
+F1 "PSU-78xx-rescue:L7805" 0 125 50 H V L CNN
 F2 "" 25 -150 50 H I L CIN
 F3 "" 0 -50 50 H I C CNN
-ALIAS L7806 L7808 L7885 L7809 L7812 L7815 L7818 L7824
 $FPLIST
  TO?252*
  TO?263*
