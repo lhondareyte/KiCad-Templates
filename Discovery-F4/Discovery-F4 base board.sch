@@ -1,35 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:Discovery-F4 base board-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -44,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_02X25 P1
+L Discovery-F4-base-board-rescue:CONN_02X25 P1
 U 1 1 5749427D
 P 3850 3600
 F 0 "P1" H 3850 4900 50  0000 C CNN
@@ -55,7 +26,7 @@ F 3 "" H 3850 2850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P3
+L Discovery-F4-base-board-rescue:CONN_01X02 P3
 U 1 1 5749430F
 P 8400 2450
 F 0 "P3" H 8400 2600 50  0000 C CNN
@@ -66,7 +37,7 @@ F 3 "" H 8400 2450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P4
+L Discovery-F4-base-board-rescue:CONN_01X02 P4
 U 1 1 57494354
 P 8400 3200
 F 0 "P4" H 8400 3350 50  0000 C CNN
@@ -77,7 +48,7 @@ F 3 "" H 8400 3200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5749437C
 P 8100 2600
 F 0 "#PWR01" H 8100 2350 50  0001 C CNN
@@ -88,7 +59,7 @@ F 3 "" H 8100 2600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 5749439A
 P 8100 3350
 F 0 "#PWR02" H 8100 3100 50  0001 C CNN
@@ -99,7 +70,7 @@ F 3 "" H 8100 3350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8100 2600 8100 2400
+	8100 2600 8100 2500
 Wire Wire Line
 	8100 2400 8200 2400
 Wire Wire Line
@@ -108,7 +79,7 @@ Connection ~ 8100 2500
 Wire Wire Line
 	8200 3150 8100 3150
 Wire Wire Line
-	8100 3150 8100 3350
+	8100 3150 8100 3250
 Wire Wire Line
 	8200 3250 8100 3250
 Connection ~ 8100 3250
@@ -203,7 +174,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 4600 4100 4600
 $Comp
-L CONN_02X25 P2
+L Discovery-F4-base-board-rescue:CONN_02X25 P2
 U 1 1 57494C92
 P 6450 3600
 F 0 "P2" H 6450 4900 50  0000 C CNN
@@ -385,19 +356,19 @@ PD12
 Wire Wire Line
 	3600 2400 3500 2400
 Wire Wire Line
-	3500 2400 3500 4900
+	3500 2400 3500 4800
 Wire Wire Line
 	3600 4800 3500 4800
 Connection ~ 3500 4800
 Wire Wire Line
 	4100 2400 4200 2400
 Wire Wire Line
-	4200 2400 4200 4900
+	4200 2400 4200 4800
 Wire Wire Line
 	4200 4800 4100 4800
 Connection ~ 4200 4800
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 574953E5
 P 3500 4900
 F 0 "#PWR03" H 3500 4650 50  0001 C CNN
@@ -408,7 +379,7 @@ F 3 "" H 3500 4900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5749542E
 P 4200 4900
 F 0 "#PWR04" H 4200 4650 50  0001 C CNN
@@ -421,15 +392,15 @@ $EndComp
 Wire Wire Line
 	6200 2400 6100 2400
 Wire Wire Line
-	6100 2400 6100 4900
+	6100 2400 6100 4800
 Connection ~ 6100 4800
 Wire Wire Line
 	6700 2400 6800 2400
 Wire Wire Line
-	6800 2400 6800 4900
+	6800 2400 6800 4800
 Connection ~ 6800 4800
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 574955E7
 P 6100 4900
 F 0 "#PWR05" H 6100 4650 50  0001 C CNN
@@ -440,7 +411,7 @@ F 3 "" H 6100 4900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 574955FE
 P 6800 4900
 F 0 "#PWR06" H 6800 4650 50  0001 C CNN
@@ -560,4 +531,16 @@ Text Label 7100 4600 2    44   ~ 0
 PC9
 Text Label 7100 4700 2    44   ~ 0
 PC7
+Wire Wire Line
+	8100 2500 8100 2400
+Wire Wire Line
+	8100 3250 8100 3350
+Wire Wire Line
+	3500 4800 3500 4900
+Wire Wire Line
+	4200 4800 4200 4900
+Wire Wire Line
+	6100 4800 6100 4900
+Wire Wire Line
+	6800 4800 6800 4900
 $EndSCHEMATC

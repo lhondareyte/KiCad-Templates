@@ -1,34 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:PSU-78xx-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -43,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L L7805 U?
+L PSU-78xx-rescue:L7805 U?
 U 1 1 5B2F77C9
 P 5800 3600
 F 0 "U?" H 5650 3725 50  0000 C CNN
@@ -54,7 +26,7 @@ F 3 "" H 5800 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L PSU-78xx-rescue:C_Small C?
 U 1 1 5B2F7881
 P 5400 3800
 F 0 "C?" H 5410 3870 50  0000 L CNN
@@ -65,7 +37,7 @@ F 3 "" H 5400 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1_Small C?
+L PSU-78xx-rescue:CP1_Small C?
 U 1 1 5B2F78AD
 P 5200 3800
 F 0 "C?" H 5210 3870 50  0000 L CNN
@@ -76,7 +48,7 @@ F 3 "" H 5200 3800 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Conn_01x02 J?
+L PSU-78xx-rescue:Conn_01x02 J?
 U 1 1 5B2F796D
 P 4700 3600
 F 0 "J?" H 4700 3700 50  0000 C CNN
@@ -87,7 +59,7 @@ F 3 "" H 4700 3600 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CP1_Small C?
+L PSU-78xx-rescue:CP1_Small C?
 U 1 1 5B2F7D67
 P 6200 3800
 F 0 "C?" H 6210 3870 50  0000 L CNN
@@ -98,7 +70,7 @@ F 3 "" H 6200 3800 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L PSU-78xx-rescue:C_Small C?
 U 1 1 5B2F7D92
 P 6400 3800
 F 0 "C?" H 6410 3870 50  0000 L CNN
@@ -109,7 +81,7 @@ F 3 "" H 6400 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L PSU-78xx-rescue:GND #PWR?
 U 1 1 5B2F7DC4
 P 5200 4000
 F 0 "#PWR?" H 5200 3750 50  0001 C CNN
@@ -120,7 +92,7 @@ F 3 "" H 5200 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L PSU-78xx-rescue:GND #PWR?
 U 1 1 5B2F7DE8
 P 5400 4000
 F 0 "#PWR?" H 5400 3750 50  0001 C CNN
@@ -131,7 +103,7 @@ F 3 "" H 5400 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L PSU-78xx-rescue:GND #PWR?
 U 1 1 5B2F7E05
 P 5800 4000
 F 0 "#PWR?" H 5800 3750 50  0001 C CNN
@@ -142,7 +114,7 @@ F 3 "" H 5800 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L PSU-78xx-rescue:GND #PWR?
 U 1 1 5B2F7E22
 P 6200 4000
 F 0 "#PWR?" H 6200 3750 50  0001 C CNN
@@ -153,7 +125,7 @@ F 3 "" H 6200 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L PSU-78xx-rescue:GND #PWR?
 U 1 1 5B2F7E3F
 P 6400 4000
 F 0 "#PWR?" H 6400 3750 50  0001 C CNN
@@ -164,7 +136,7 @@ F 3 "" H 6400 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L PSU-78xx-rescue:GND #PWR?
 U 1 1 5B2F7E5C
 P 5000 4000
 F 0 "#PWR?" H 5000 3750 50  0001 C CNN
@@ -175,7 +147,7 @@ F 3 "" H 5000 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 3600 5500 3600
+	4900 3600 5200 3600
 Wire Wire Line
 	5200 3600 5200 3700
 Wire Wire Line
@@ -191,7 +163,7 @@ Wire Wire Line
 Connection ~ 5200 3600
 Connection ~ 5400 3600
 Wire Wire Line
-	6100 3600 6600 3600
+	6100 3600 6200 3600
 Wire Wire Line
 	6200 3600 6200 3700
 Wire Wire Line
@@ -204,4 +176,12 @@ Wire Wire Line
 Wire Wire Line
 	6400 3900 6400 4000
 Connection ~ 6400 3600
+Wire Wire Line
+	5200 3600 5400 3600
+Wire Wire Line
+	5400 3600 5500 3600
+Wire Wire Line
+	6200 3600 6400 3600
+Wire Wire Line
+	6400 3600 6600 3600
 $EndSCHEMATC
