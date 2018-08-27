@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:XTAL-cache
-LIBS:ISP-cache
+LIBS:atmega8-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -321,4 +320,70 @@ Wire Wire Line
 	1800 5900 1800 5700
 Wire Wire Line
 	2300 5700 2300 5900
+$Comp
+L Device:C_Small C?
+U 1 1 5B85D8FB
+P 3300 2900
+F 0 "C?" H 3208 2854 50  0000 R CNN
+F 1 "100n" H 3208 2945 50  0000 R CNN
+F 2 "" H 3300 2900 50  0001 C CNN
+F 3 "~" H 3300 2900 50  0001 C CNN
+	1    3300 2900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B85D92C
+P 3150 3100
+F 0 "#PWR?" H 3150 2850 50  0001 C CNN
+F 1 "GND" H 3155 2927 50  0000 C CNN
+F 2 "" H 3150 3100 50  0001 C CNN
+F 3 "" H 3150 3100 50  0001 C CNN
+	1    3150 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5B85DA3C
+P 3150 2700
+F 0 "#PWR?" H 3150 2550 50  0001 C CNN
+F 1 "+5V" H 3165 2873 50  0000 C CNN
+F 2 "" H 3150 2700 50  0001 C CNN
+F 3 "" H 3150 2700 50  0001 C CNN
+	1    3150 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 5B85DA76
+P 3000 2900
+F 0 "C?" H 2800 2950 50  0000 L CNN
+F 1 "10u" H 2800 2850 44  0000 L CNN
+F 2 "" H 3000 2900 50  0001 C CNN
+F 3 "~" H 3000 2900 50  0001 C CNN
+	1    3000 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2800 3000 2750
+Wire Wire Line
+	3000 2750 3150 2750
+Wire Wire Line
+	3300 2750 3300 2800
+Wire Wire Line
+	3000 3000 3000 3050
+Wire Wire Line
+	3000 3050 3150 3050
+Wire Wire Line
+	3300 3050 3300 3000
+Wire Wire Line
+	3150 3050 3150 3100
+Connection ~ 3150 3050
+Wire Wire Line
+	3150 3050 3300 3050
+Wire Wire Line
+	3150 2750 3150 2700
+Connection ~ 3150 2750
+Wire Wire Line
+	3150 2750 3300 2750
 $EndSCHEMATC
