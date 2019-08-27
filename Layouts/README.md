@@ -1,1 +1,1 @@
-## Simplified layout for EEschema
+## Default project for KiCad
