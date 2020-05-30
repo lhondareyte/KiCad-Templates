@@ -1,0 +1,284 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J?
+U 1 1 5ED25593
+P 1400 1300
+F 0 "J?" H 1450 875 50  0000 C CNN
+F 1 "PSU" H 1450 966 50  0000 C CNN
+F 2 "" H 1400 1300 50  0001 C CNN
+F 3 "~" H 1400 1300 50  0001 C CNN
+	1    1400 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J?
+U 1 1 5ED29EB7
+P 3450 1400
+F 0 "J?" H 3500 1917 50  0000 C CNN
+F 1 "PSU" H 3500 1826 50  0000 C CNN
+F 2 "" H 3450 1400 50  0001 C CNN
+F 3 "~" H 3450 1400 50  0001 C CNN
+	1    3450 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1200 1650 1200
+Wire Wire Line
+	1650 1200 1650 1300
+Wire Wire Line
+	1600 1400 1650 1400
+Connection ~ 1650 1400
+Wire Wire Line
+	1650 1400 1650 1600
+Wire Wire Line
+	1600 1300 1650 1300
+Connection ~ 1650 1300
+Wire Wire Line
+	1650 1300 1650 1400
+Wire Wire Line
+	1100 1200 1050 1200
+Wire Wire Line
+	1050 1200 1050 1300
+Wire Wire Line
+	1100 1400 1050 1400
+Connection ~ 1050 1400
+Wire Wire Line
+	1050 1400 1050 1600
+Wire Wire Line
+	1100 1300 1050 1300
+Connection ~ 1050 1300
+Wire Wire Line
+	1050 1300 1050 1400
+$Comp
+L power:GND #PWR?
+U 1 1 5ED2C243
+P 1650 1600
+F 0 "#PWR?" H 1650 1350 50  0001 C CNN
+F 1 "GND" H 1655 1427 50  0000 C CNN
+F 2 "" H 1650 1600 50  0001 C CNN
+F 3 "" H 1650 1600 50  0001 C CNN
+	1    1650 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5ED2C7E9
+P 1050 1600
+F 0 "#PWR?" H 1050 1350 50  0001 C CNN
+F 1 "GND" H 1055 1427 50  0000 C CNN
+F 2 "" H 1050 1600 50  0001 C CNN
+F 3 "" H 1050 1600 50  0001 C CNN
+	1    1050 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5ED2CD3F
+P 1750 1100
+F 0 "#PWR?" H 1750 950 50  0001 C CNN
+F 1 "+12V" V 1765 1228 50  0000 L CNN
+F 2 "" H 1750 1100 50  0001 C CNN
+F 3 "" H 1750 1100 50  0001 C CNN
+	1    1750 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5ED2D8E2
+P 950 1100
+F 0 "#PWR?" H 950 950 50  0001 C CNN
+F 1 "+12V" V 965 1228 50  0000 L CNN
+F 2 "" H 950 1100 50  0001 C CNN
+F 3 "" H 950 1100 50  0001 C CNN
+	1    950  1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5ED2E646
+P 1750 1500
+F 0 "#PWR?" H 1750 1600 50  0001 C CNN
+F 1 "-12V" V 1765 1628 50  0000 L CNN
+F 2 "" H 1750 1500 50  0001 C CNN
+F 3 "" H 1750 1500 50  0001 C CNN
+	1    1750 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5ED3069E
+P 950 1500
+F 0 "#PWR?" H 950 1600 50  0001 C CNN
+F 1 "-12V" V 965 1628 50  0000 L CNN
+F 2 "" H 950 1500 50  0001 C CNN
+F 3 "" H 950 1500 50  0001 C CNN
+	1    950  1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	950  1500 1100 1500
+Wire Wire Line
+	950  1100 1100 1100
+Wire Wire Line
+	1600 1100 1750 1100
+Wire Wire Line
+	1600 1500 1750 1500
+$Comp
+L power:-12V #PWR?
+U 1 1 5ED33494
+P 3900 1800
+F 0 "#PWR?" H 3900 1900 50  0001 C CNN
+F 1 "-12V" V 3915 1928 50  0000 L CNN
+F 2 "" H 3900 1800 50  0001 C CNN
+F 3 "" H 3900 1800 50  0001 C CNN
+	1    3900 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 1500 3800 1500
+Wire Wire Line
+	3800 1500 3800 1600
+Wire Wire Line
+	3750 1700 3800 1700
+Connection ~ 3800 1700
+Wire Wire Line
+	3800 1700 3800 1900
+Wire Wire Line
+	3750 1600 3800 1600
+Connection ~ 3800 1600
+Wire Wire Line
+	3800 1600 3800 1700
+Wire Wire Line
+	3250 1500 3200 1500
+Wire Wire Line
+	3200 1500 3200 1600
+Wire Wire Line
+	3250 1700 3200 1700
+Connection ~ 3200 1700
+Wire Wire Line
+	3200 1700 3200 1900
+Wire Wire Line
+	3250 1600 3200 1600
+Connection ~ 3200 1600
+Wire Wire Line
+	3200 1600 3200 1700
+$Comp
+L power:+12V #PWR?
+U 1 1 5ED354F1
+P 3900 1400
+F 0 "#PWR?" H 3900 1250 50  0001 C CNN
+F 1 "+12V" V 3915 1528 50  0000 L CNN
+F 2 "" H 3900 1400 50  0001 C CNN
+F 3 "" H 3900 1400 50  0001 C CNN
+	1    3900 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5ED35ADF
+P 3100 1800
+F 0 "#PWR?" H 3100 1900 50  0001 C CNN
+F 1 "-12V" V 3115 1928 50  0000 L CNN
+F 2 "" H 3100 1800 50  0001 C CNN
+F 3 "" H 3100 1800 50  0001 C CNN
+	1    3100 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5ED35FCD
+P 3100 1400
+F 0 "#PWR?" H 3100 1250 50  0001 C CNN
+F 1 "+12V" V 3115 1528 50  0000 L CNN
+F 2 "" H 3100 1400 50  0001 C CNN
+F 3 "" H 3100 1400 50  0001 C CNN
+	1    3100 1400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3100 1800 3250 1800
+Wire Wire Line
+	3100 1400 3250 1400
+Wire Wire Line
+	3750 1400 3900 1400
+Wire Wire Line
+	3750 1800 3900 1800
+$Comp
+L power:GND #PWR?
+U 1 1 5ED37DB9
+P 3200 1900
+F 0 "#PWR?" H 3200 1650 50  0001 C CNN
+F 1 "GND" H 3205 1727 50  0000 C CNN
+F 2 "" H 3200 1900 50  0001 C CNN
+F 3 "" H 3200 1900 50  0001 C CNN
+	1    3200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5ED38133
+P 3800 1900
+F 0 "#PWR?" H 3800 1650 50  0001 C CNN
+F 1 "GND" H 3805 1727 50  0000 C CNN
+F 2 "" H 3800 1900 50  0001 C CNN
+F 3 "" H 3800 1900 50  0001 C CNN
+	1    3800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5ED38734
+P 3900 1300
+F 0 "#PWR?" H 3900 1150 50  0001 C CNN
+F 1 "+5V" V 3915 1428 50  0000 L CNN
+F 2 "" H 3900 1300 50  0001 C CNN
+F 3 "" H 3900 1300 50  0001 C CNN
+	1    3900 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5ED39816
+P 3100 1300
+F 0 "#PWR?" H 3100 1150 50  0001 C CNN
+F 1 "+5V" V 3115 1428 50  0000 L CNN
+F 2 "" H 3100 1300 50  0001 C CNN
+F 3 "" H 3100 1300 50  0001 C CNN
+	1    3100 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 1100 4000 1100
+Wire Wire Line
+	3000 1100 3250 1100
+Wire Wire Line
+	3100 1300 3250 1300
+Wire Wire Line
+	3750 1300 3900 1300
+Wire Wire Line
+	3750 1200 4000 1200
+Wire Wire Line
+	3250 1200 3000 1200
+Text Label 4000 1200 2    44   ~ 0
+CV
+Text Label 4000 1100 2    44   ~ 0
+GATE
+Text Label 3000 1100 0    44   ~ 0
+GATE
+Text Label 3000 1200 0    44   ~ 0
+CV
+$EndSCHEMATC
