@@ -1,0 +1,85 @@
+#!/bin/sh
+#
+
+SCRIPT="$(basename $0)"
+SHAREPCB="$LOFI/KiCad-Templates/"
+
+Usage () {
+	printf "Usage : \n \
+	$SCRIPT [ mv | rename ] <src> <dst>\n\
+	$SCRIPT [ mk | create ] <name>\n"
+	exit 0
+}
+
+Exit () {
+	rc=$1 ; shift
+	echo "$*"
+	exit $rc
+}
+
+k_mk () {
+	name=$1
+	if [ -z $1 ] ; then
+		Exit 1 "$SCRIPT $0 <name>"
+	fi
+	suffixes="kicad_pcb kicad_wks pro sch lib"
+	for f in $suffixes
+	do
+		cp $SHAREPCB/Template/Default.$f .
+	done
+	cp $SHAREPCB/Template/sym-lib-table .
+}
+
+k_mv () {
+	src=$1
+	dst=$2
+	suffixs="-cache.lib -cache.dcm .kicad_pcb .kicad_wks .pro .sch .lib"
+
+	# Check if destination file already exist
+	for s in $suffixs
+	do
+		if [ -f ${dst}$s ] ; then
+			echo "Cannot rename KiCad project: ${dst}$s already exist!"
+			exit 1
+		fi
+	done
+
+	# Rename each file
+	for s in $suffixs
+	do
+		if [ -f ${src}$s ] ; then
+			mv "${src}$s" "${dst}$s"
+		fi
+	done
+
+	# Update Project file
+	for s in $suffixs
+	do
+		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.pro"
+		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.sch"
+	done
+	eval sed -i '' -e 's/${src}-cache/${dst}-cache/' "${dst}.pro"
+	if [ -f sym-lib-table ] ; then
+		eval sed -i '' -e 's/${src}/${dst}/g' sym-lib-table
+	fi
+	SRCLIB=$(echo $src | tr [a-z] [A-Z])
+	DSTLIB=$(echo $dst | tr [a-z] [A-Z])
+	if [ -f ${dst}.lib ] ; then
+		eval sed -i '' -e 's/${SRCLIB}/${DSTLIB}/' "${dst}.lib"
+	fi
+	rm -f *-e
+}
+
+cmd=$1 ; shift
+case $cmd in
+	'mv'|'rename')
+		k_mv $1 $2
+		;;
+	'mk'|'make'|'create')
+		k_mk $1
+		k_mv Default $1
+		;;
+	*)
+		Usage
+		;;
+esac
