@@ -59,6 +59,9 @@ k_mv () {
 		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.sch"
 	done
 	eval sed -i '' -e 's/${src}-cache/${dst}-cache/' "${dst}.pro"
+	if [ -f fp-lib-table ] ; then
+		eval sed -i '' -e 's/${src}/${dst}/g' fp-lib-table
+	fi
 	if [ -f sym-lib-table ] ; then
 		eval sed -i '' -e 's/${src}/${dst}/g' sym-lib-table
 	fi
@@ -78,6 +81,7 @@ case $cmd in
 	'mk'|'make'|'create')
 		k_mk $1
 		k_mv Default $1
+		mkdir -p $name.pretty
 		;;
 	*)
 		Usage
