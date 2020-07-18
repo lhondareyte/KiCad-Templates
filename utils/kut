@@ -20,7 +20,7 @@ Exit () {
 k_mk () {
 	name=$1
 	if [ -z $1 ] ; then
-		Exit 1 "$SCRIPT $0 <name>"
+		Exit 1 "$SCRIPT [mk|make|create] <name>"
 	fi
 	suffixes="kicad_pcb kicad_wks pro sch lib"
 	for f in $suffixes
@@ -28,6 +28,7 @@ k_mk () {
 		cp $SHAREPCB/Template/Default.$f .
 	done
 	cp $SHAREPCB/Template/sym-lib-table .
+	cp $SHAREPCB/Template/fp-lib-table .
 }
 
 k_mv () {
