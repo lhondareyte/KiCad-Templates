@@ -20,7 +20,7 @@
   (tbtext "Sheet: %S/%N" (name text9:Text) (pos 24 4.1))
   (line (name segm7:Line) (start 110 12.5) (end 2 12.5))
   (tbtext "Project: %C0" (name text10:Text) (pos 70.502 3.507))
-  (tbtext "Title: %T" (name text11:Text) (pos 109.0002 16.7002) (font (size 4 4) bold italic))
+  (tbtext " %T" (name text11:Text) (pos 109.0002 16.7002) (font (size 4 4) bold italic))
   (tbtext "File: %F" (name text12:Text) (pos 109.0002 10.30019999999999))
   (tbtext %Y (name text13:Text) (pos 33 10.5))
   (tbtext "Author/Company: " (name text14:Text) (pos 53.00020000000001 10.50019999999998))
