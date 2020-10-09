@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name atmega8u2-rescue)(type Legacy)(uri ${KIPRJMOD}/atmega8u2-rescue.lib)(options "")(descr ""))
+)

@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Discovery-F4 base board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Discovery-F4-base-board-rescue:CONN_02X25 P1
+L Discovery-F4-base-board-rescue:CONN_02X25-Discovery-F4-base-board-rescue P1
 U 1 1 5749427D
 P 3850 3600
 F 0 "P1" H 3850 4900 50  0000 C CNN
@@ -26,7 +25,7 @@ F 3 "" H 3850 2850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Discovery-F4-base-board-rescue:CONN_01X02 P3
+L Discovery-F4-base-board-rescue:CONN_01X02-Discovery-F4-base-board-rescue P3
 U 1 1 5749430F
 P 8400 2450
 F 0 "P3" H 8400 2600 50  0000 C CNN
@@ -37,7 +36,7 @@ F 3 "" H 8400 2450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Discovery-F4-base-board-rescue:CONN_01X02 P4
+L Discovery-F4-base-board-rescue:CONN_01X02-Discovery-F4-base-board-rescue P4
 U 1 1 57494354
 P 8400 3200
 F 0 "P4" H 8400 3350 50  0000 C CNN
@@ -174,7 +173,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 4600 4100 4600
 $Comp
-L Discovery-F4-base-board-rescue:CONN_02X25 P2
+L Discovery-F4-base-board-rescue:CONN_02X25-Discovery-F4-base-board-rescue P2
 U 1 1 57494C92
 P 6450 3600
 F 0 "P2" H 6450 4900 50  0000 C CNN

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Discovery-F4-base-board-rescue)(type Legacy)(uri "${KIPRJMOD}/Discovery-F4 base board-rescue.lib")(options "")(descr ""))
+)
