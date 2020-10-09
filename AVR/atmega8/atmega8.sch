@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:atmega8-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -165,7 +164,7 @@ F 3 "" H 2250 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Microchip_ATmega:ATmega8-16AU U?
+L atmega8-rescue:ATmega8-16AU-MCU_Microchip_ATmega U?
 U 1 1 5B83C624
 P 5400 3750
 F 0 "U?" H 5850 2250 50  0000 C CNN

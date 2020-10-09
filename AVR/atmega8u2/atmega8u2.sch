@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:atmega8u2-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -303,7 +302,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 5700 2300 5900
 $Comp
-L MCU_Microchip_ATmega:ATmega8U2-AU U?
+L atmega8u2-rescue:ATmega8U2-AU-MCU_Microchip_ATmega U?
 U 1 1 5B841C83
 P 5950 3650
 F 0 "U?" H 5450 2250 50  0000 C CNN
