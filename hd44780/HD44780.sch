@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -39,17 +39,17 @@ LCD-RS
 Text Label 8450 1850 0    44   ~ 0
 LCD-EN
 Text Label 8450 2150 0    44   ~ 0
-LCD-D4
+LCD-D5
 Text Label 8450 2250 0    44   ~ 0
-LCD-D6
+LCD-D7
 Wire Wire Line
 	9250 2150 9550 2150
 Wire Wire Line
 	9250 2250 9550 2250
 Text Label 9550 2150 2    44   ~ 0
-LCD-D5
+LCD-D4
 Text Label 9550 2250 2    44   ~ 0
-LCD-D7
+LCD-D6
 Wire Wire Line
 	8700 1650 8700 1500
 Wire Wire Line
@@ -68,13 +68,13 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J?
 U 1 1 5B797694
-P 8950 1950
-F 0 "J?" H 9000 2467 50  0000 C CNN
-F 1 "hd44780" H 9000 2376 50  0000 C CNN
-F 2 "" H 8950 1950 50  0001 C CNN
-F 3 "~" H 8950 1950 50  0001 C CNN
-	1    8950 1950
-	1    0    0    -1  
+P 9050 1950
+F 0 "J?" H 9100 2467 50  0000 C CNN
+F 1 "HD44780" H 9100 2376 50  0000 C CNN
+F 2 "" H 9050 1950 50  0001 C CNN
+F 3 "~" H 9050 1950 50  0001 C CNN
+	1    9050 1950
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	8450 2250 8750 2250
