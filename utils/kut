@@ -22,7 +22,7 @@ k_mk () {
 	if [ -z $1 ] ; then
 		Exit 1 "$SCRIPT [mk|make|create] <name>"
 	fi
-	suffixes="kicad_pcb kicad_wks pro sch lib"
+	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch lib"
 	for f in $suffixes
 	do
 		cp $SHAREPCB/Template/Default.$f .
@@ -34,10 +34,10 @@ k_mk () {
 k_mv () {
 	src=$1
 	dst=$2
-	suffixs="-cache.lib -cache.dcm .kicad_pcb .kicad_wks .pro .sch .lib"
+	suffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks .kicad_pro .kicad_sch .lib"
 
 	# Check if destination file already exist
-	for s in $suffixs
+	for s in $suffixes
 	do
 		if [ -f ${dst}$s ] ; then
 			echo "Cannot rename KiCad project: ${dst}$s already exist!"
