@@ -46,7 +46,7 @@ k_mv () {
 	done
 
 	# Rename each file
-	for s in $suffixs
+	for s in $suffixes
 	do
 		if [ -f ${src}$s ] ; then
 			mv "${src}$s" "${dst}$s"
@@ -54,12 +54,12 @@ k_mv () {
 	done
 
 	# Update Project file
-	for s in $suffixs
+	for s in $suffixes
 	do
-		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.pro"
-		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.sch"
+		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.kicad_pro"
+		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.kicad_sch"
 	done
-	eval sed -i '' -e 's/${src}-cache/${dst}-cache/' "${dst}.pro"
+	eval sed -i '' -e 's/${src}-cache/${dst}-cache/' "${dst}.kicad_pro"
 	if [ -f fp-lib-table ] ; then
 		eval sed -i '' -e 's/${src}/${dst}/g' fp-lib-table
 	fi
