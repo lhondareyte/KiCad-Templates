@@ -22,7 +22,7 @@ k_mk () {
 	if [ -z $1 ] ; then
 		Exit 1 "$SCRIPT [mk|make|create] <name>"
 	fi
-	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch lib"
+	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch kicad_sym"
 	for f in $suffixes
 	do
 		cp $SHAREPCB/Template/Default.$f .
@@ -34,7 +34,7 @@ k_mk () {
 k_mv () {
 	src=$1
 	dst=$2
-	suffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks .kicad_pro .kicad_sch .lib"
+	suffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks .kicad_pro .kicad_sch .kicad_sym .lib"
 
 	# Check if destination file already exist
 	for s in $suffixes
