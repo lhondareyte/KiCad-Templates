@@ -2,7 +2,12 @@
 #
 
 SCRIPT="$(basename $0)"
-SHAREPCB="$LOFI/KiCad-Templates/"
+CONFIG="$HOME/.etc/kut.conf"
+if [ -f $CONFIG ] ; then
+	. $CONFIG
+else
+	SHAREPCB="$LOFI/KiCad-Templates/"
+fi
 
 Usage () {
 	printf "Usage : \n \
@@ -20,7 +25,7 @@ Exit () {
 k_mk () {
 	name=$1
 	if [ -z $1 ] ; then
-		Exit 1 "$SCRIPT [mk|make|create] <name>"
+		Usage
 	fi
 	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch kicad_sym"
 	for f in $suffixes
