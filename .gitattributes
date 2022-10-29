@@ -1,1 +1,2 @@
-utils/kut linguist-detectable=false
+utils/kut -linguist-detectable
+*.kicad_sch linguist-detectable
