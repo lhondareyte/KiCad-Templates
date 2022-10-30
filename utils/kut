@@ -39,7 +39,9 @@ k_mk () {
 k_mv () {
 	src=$1
 	dst=$2
-	suffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks .kicad_pro .kicad_sch .kicad_sym .lib"
+	euffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks \
+		  -rescue.lib -rescue.dcm .kicad_prl  \
+		  .kicad_pro .kicad_sch .kicad_sym .lib"
 
 	# Check if destination file already exist
 	for s in $suffixes
@@ -50,6 +52,9 @@ k_mv () {
 		fi
 	done
 
+	if [ -d ${src}.pretty ] ; then
+		mv ${src}.pretty ${dst}.pretty
+	fi
 	# Rename each file
 	for s in $suffixes
 	do
