@@ -27,6 +27,9 @@ k_mk () {
 	if [ -z $1 ] ; then
 		Usage
 	fi
+	if [ ! -d $SHAREPCB ] ; then
+		Exit 1 "Cannot find template directory."
+	fi
 	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch kicad_sym"
 	for f in $suffixes
 	do
