@@ -22,32 +22,37 @@ Exit () {
 	exit $rc
 }
 
+if [ -z "${SHAREPCB}" ] ; then
+	Exit 1 "SHAREPCB is not defined. Please check ${CONFIG}."
+fi
+
+if [ ! -d "${SHAREPCB}" ] ; then
+	Exit 1 "Cannot find template directory (${SHAREPCB})."
+fi
+
 k_mk () {
 	name=$1
 	if [ -z $1 ] ; then
 		Usage
 	fi
-	if [ ! -d $SHAREPCB ] ; then
-		Exit 1 "Cannot find template directory."
-	fi
 	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch kicad_sym"
-	for f in $suffixes
+	for f in ${suffixes}
 	do
-		cp $SHAREPCB/Template/Default.$f .
+		cp "${SHAREPCB}"/Template/Default.${f} .
 	done
-	cp $SHAREPCB/Template/sym-lib-table .
-	cp $SHAREPCB/Template/fp-lib-table .
+	cp "${SHAREPCB}"/Template/sym-lib-table .
+	cp "${SHAREPCB}"/Template/fp-lib-table .
 }
 
 k_mv () {
 	src=$1
 	dst=$2
-	euffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks \
+	suffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks \
 		  -rescue.lib -rescue.dcm .kicad_prl  \
 		  .kicad_pro .kicad_sch .kicad_sym .lib"
 
 	# Check if destination file already exist
-	for s in $suffixes
+	for s in ${suffixes}
 	do
 		if [ -f ${dst}$s ] ; then
 			echo "Cannot rename KiCad project: ${dst}$s already exist!"
@@ -59,18 +64,18 @@ k_mv () {
 		mv ${src}.pretty ${dst}.pretty
 	fi
 	# Rename each file
-	for s in $suffixes
+	for s in ${suffixes}
 	do
 		if [ -f ${src}$s ] ; then
-			mv "${src}$s" "${dst}$s"
+			mv "${src}${s}" "${dst}${s}"
 		fi
 	done
 
 	# Update Project file
-	for s in $suffixes
+	for s in ${suffixes}
 	do
-		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.kicad_pro"
-		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "$dst.kicad_sch"
+		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "${dst}.kicad_pro"
+		eval sed -i '' -e 's/${src}${s}/${dst}${s}/' "${dst}.kicad_sch"
 	done
 	eval sed -i '' -e 's/${src}-cache/${dst}-cache/' "${dst}.kicad_pro"
 	if [ -f fp-lib-table ] ; then
@@ -79,8 +84,8 @@ k_mv () {
 	if [ -f sym-lib-table ] ; then
 		eval sed -i '' -e 's/${src}/${dst}/g' sym-lib-table
 	fi
-	SRCLIB=$(echo $src | tr [a-z] [A-Z])
-	DSTLIB=$(echo $dst | tr [a-z] [A-Z])
+	SRCLIB=$(echo ${src} | tr [a-z] [A-Z])
+	DSTLIB=$(echo ${dst} | tr [a-z] [A-Z])
 	if [ -f ${dst}.lib ] ; then
 		eval sed -i '' -e 's/${SRCLIB}/${DSTLIB}/' "${dst}.lib"
 	fi
