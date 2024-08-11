@@ -54,8 +54,8 @@
 				(start -20.32 45.72)
 				(end 20.32 -38.1)
 				(stroke
-					(width 0)
-					(type default)
+					(width 0.254)
+					(type solid)
 				)
 				(fill
 					(type background)
