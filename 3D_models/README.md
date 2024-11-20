@@ -4,5 +4,5 @@ Some 3D models made with [FreeCAD](https://www.freecad.org)
 
 | <!-- -->      | <!-- -->        | <!-- -->      | <!-- -->      |
 |:-------------:|:---------------:|:-------------:|:-------------:|
-|![](pics/1.jpg)|![](pics/2.jpg)|![](pics/3.jpg)|![](pics/4.jpg)|
-|![](pics/5.jpg)|![](pics/6.jpg)|![](pics/7.jpg)||
+|![](pics/1.png)|![](pics/2.png)|![](pics/3.png)|![](pics/4.png)|
+|![](pics/5.png)|![](pics/6.png)|![](pics/7.png)||
