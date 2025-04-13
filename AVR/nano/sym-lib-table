@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "arduino-nano")(type "KiCad")(uri "${KIPRJMOD}/arduino-nano.kicad_sym")(options "")(descr ""))
+  (lib (name "FriendlyArm")(type "KiCad")(uri "/Users/luc/Projets/Lofitech/FriendlyArm.kicad_sym")(options "")(descr ""))
+)
