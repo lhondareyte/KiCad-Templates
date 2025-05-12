@@ -35,7 +35,7 @@ k_mk () {
 	if [ -z $1 ] ; then
 		Usage
 	fi
-	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch kicad_sym kycad_prl"
+	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch kicad_sym kicad_prl"
 	for f in ${suffixes}
 	do
 		cp "${SHAREPCB}"/Template/Default.${f} .
