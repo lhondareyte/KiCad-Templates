@@ -2,17 +2,17 @@
 #
 
 SCRIPT="$(basename $0)"
-CONFIG="$HOME/.etc/kut.conf"
-if [ -f $CONFIG ] ; then
-	. $CONFIG
+CONFIG="${HOME}/.etc/kut.conf"
+if [ -f "${CONFIG}" ] ; then
+	. ${CONFIG}
 else
-	SHAREPCB="$LOFI/KiCad-Templates/"
+	SHAREPCB="${LOFI}/KiCad-Templates/"
 fi
 
 Usage () {
 	printf "Usage : \n \
-	$SCRIPT [ mv | rename ] <src> <dst>\n\
-	$SCRIPT [ mk | create ] <name>\n"
+	${SCRIPT} [ mv | rename ] <src> <dst>\n\
+	${SCRIPT} [ mk | create ] <name>\n"
 	exit 0
 }
 
@@ -31,8 +31,8 @@ if [ ! -d "${SHAREPCB}" ] ; then
 fi
 
 k_mk () {
-	name=$1
-	if [ -z $1 ] ; then
+	name="${1}"
+	if [ -z "${1}" ] ; then
 		Usage
 	fi
 	suffixes="kicad_pcb kicad_wks kicad_pro kicad_sch kicad_sym kicad_prl"
@@ -45,8 +45,8 @@ k_mk () {
 }
 
 k_mv () {
-	src=$1
-	dst=$2
+	src="${1}"
+	dst="${2}"
 	suffixes="-cache.lib -cache.dcm .kicad_pcb .kicad_wks \
 		  -rescue.lib -rescue.dcm .kicad_prl  \
 		  .kicad_pro .kicad_sch .kicad_sym .lib"
@@ -54,19 +54,18 @@ k_mv () {
 	# Check if destination file already exist
 	for s in ${suffixes}
 	do
-		if [ -f ${dst}$s ] ; then
-			echo "Cannot rename KiCad project: ${dst}$s already exist!"
-			exit 1
+		if [ -f "${dst}${s}" ] ; then
+			Exit 1 "Cannot rename KiCad project: ${dst}${s} already exist!"
 		fi
 	done
 
-	if [ -d ${src}.pretty ] ; then
-		mv ${src}.pretty ${dst}.pretty
+	if [ -d "${src}.pretty" ] ; then
+		mv "${src}.pretty" "${dst}.pretty"
 	fi
 	# Rename each file
 	for s in ${suffixes}
 	do
-		if [ -f ${src}$s ] ; then
+		if [ -f "${src}${s}" ] ; then
 			mv "${src}${s}" "${dst}${s}"
 		fi
 	done
@@ -84,23 +83,23 @@ k_mv () {
 	if [ -f sym-lib-table ] ; then
 		eval sed -i '' -e 's/${src}/${dst}/g' sym-lib-table
 	fi
-	SRCLIB=$(echo ${src} | tr [a-z] [A-Z])
-	DSTLIB=$(echo ${dst} | tr [a-z] [A-Z])
-	if [ -f ${dst}.lib ] ; then
+	SRCLIB="$(echo ${src} | tr [a-z] [A-Z])"
+	DSTLIB="$(echo ${dst} | tr [a-z] [A-Z])"
+	if [ -f "${dst}.lib" ] ; then
 		eval sed -i '' -e 's/${SRCLIB}/${DSTLIB}/' "${dst}.lib"
 	fi
 	rm -f *-e
 }
 
-cmd=$1 ; shift
-case $cmd in
+cmd=${1} ; shift
+case ${cmd} in
 	'mv'|'rename')
-		k_mv $1 $2
+		k_mv "${1}" "${2}"
 		;;
 	'mk'|'make'|'create')
-		k_mk $1
-		k_mv Default $1
-		mkdir -p $name.pretty
+		k_mk "${1}"
+		k_mv Default "${1}"
+		mkdir -p "${name}.pretty"
 		;;
 	*)
 		Usage
