@@ -1,7 +1,8 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
-FILE_NAME('Open CASCADE Shape Model','2024-11-20T12:21:29',(''),(''),
+FILE_NAME('Battery-Holder-9v.step','2024-11-20T12:21:29',
+  ('Luc Hondareyte'),(''),
   'Open CASCADE STEP processor 7.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
 ENDSEC;
